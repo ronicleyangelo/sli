@@ -26,8 +26,8 @@
           </thead>
           <tbody>
           <tr *ngFor="let user of users">
-            <td [innerHTML]="user.name"></td>
-            <td [innerHTML]="user.email"></td>
+            <td> {{ user.name }}</td>
+            <td> {{ user.email }} </td>
             <td class="text-center">
               <button type="button" mat-stroked-button color="primary" class="btn btn-sm btn-info" >Editar</button>
               <button type="button" mat-stroked-button color="danger" class="btn btn-sm btn-danger">Excluir</button>
@@ -35,7 +35,7 @@
           </tr>
           </tbody>
         </table>
-        <mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+        <!-- <mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"></mat-paginator> -->
       </div>
     </div>
   </div>
