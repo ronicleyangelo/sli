@@ -1,0 +1,100 @@
+/* Futuristic Base Style */
+header.navbar {
+  background-color: #00448B; /* Deeper blue for a futuristic feel */
+  backdrop-filter: blur(5px); /* Soft glow effect */
+  -webkit-backdrop-filter: blur(5px);
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: sans-serif; /* Modern font for a sleek look */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+}
+
+/* Futuristic Menu Button */
+.navbar-toggler {
+  background-color: transparent;
+  border: 0.2rem solid #fff; /* Glowing border */
+  border-radius: 50%; /* Circular shape */
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  color: rgba(98, 104, 182);
+  transition: all 0.1s ease-in-out; /* Smooth hover effect */
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  background-color: rgba(52, 114, 190 ); /* Subtle hover glow */
+  color: #ddd;
+}
+
+/* Menu Items with Glowing Lines */
+.example-menu {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 180px;
+  max-width: 380px;
+  background-color: rgba(255, 255, 255, 0.4); /* Translucent background */
+  padding: 20px 0;
+  border-radius: 0.2rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 1); /* Soft shadow */
+  margin-top: 0.8rem;
+  margin-left: -1rem;
+}
+
+.example-menu-item {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  min-width: 64px;
+  line-height: 40px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex: 1;
+  position: relative; /* For line effect */
+}
+
+/* Neon-like Lines for Menu Items */
+.example-menu-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff; /* Glowing line */
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.example-menu-item:hover::before {
+  opacity: 1;
+}
+
+/* Interactivity and Styling for Menu Items */
+.example-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover glow */
+}
+
+.example-menu-item:active {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly stronger hover glow */
+}
+
+.example-standalone-item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.example-standalone-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.example-standalone-item[aria-expanded='true'] {
+  background-color: rgba(255, 255, 255, 0.2);
+}

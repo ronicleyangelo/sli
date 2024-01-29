@@ -1,0 +1,28 @@
+<div class="row justify-content-center login">
+    <div class="col-3">
+        <div class="card">
+            <div class="card-body">
+              <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="col-sm-12">
+                  <label class="col-form-label">Usuário</label>
+                  <input class="form-control" type="text" autocomplete="off" formControlName="login" required>
+                </div>
+
+                <div class="col-sm-12 pt-2">
+                  <label class="col-form-label">Senha</label>
+                  <input class="form-control" type="password" autocomplete="off" formControlName="senha" required>
+                </div>
+
+                <div class="col-sm-12 pt-3 justify-content-center">
+                  <button mat-raised-button color="primary" type="submit" class="justify-content-center"
+                          [disabled]="!loginForm.valid">SingUp
+                  </button>
+                </div>
+              </form>
+            </div>
+      </div>
+    </div>
+    <div>
+  <!--    <img class="zaruce-image" src="{{imgURL}}" alt="">-->
+    </div>
+  </div>

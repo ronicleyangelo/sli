@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+
+<div class="card">
+  <div class="card-body">
+    <div class="row justify-content-center mt-4">
+      <div class="col-sm-12">
+        <form class="search-bar d-flex align-items-center">
+          <input type="text" class="form-control me-2" matInput placeholder="{{ searchPlaceholder }}">
+          <button type="button"  class="btn btn-primary">{{ searchButtonLabel }}</button>
+        </form>
+        <div class="add-user-button mt-4">
+          <button type="button" class="btn btn-warning" >{{ addUserButtonLabel }}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-10">
+        <table class="table table-hover table-dark">
+          <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col" class="text-center">Ações</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let user of users">
+            <td [innerHTML]="user.name"></td>
+            <td [innerHTML]="user.email"></td>
+            <td class="text-center">
+              <button type="button" mat-stroked-button color="primary" class="btn btn-sm btn-info" >Editar</button>
+              <button type="button" mat-stroked-button color="danger" class="btn btn-sm btn-danger">Excluir</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+      </div>
+    </div>
+  </div>
+</div>

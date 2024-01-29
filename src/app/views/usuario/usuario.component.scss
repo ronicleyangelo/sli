@@ -1,0 +1,80 @@
+/* Cores */
+body {
+  background-color: #011425;
+}
+
+.container-fluid {
+  background-color: rgba(44, 62, 80, 0.1);
+  background-image: url("/assets/image/zaruc.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.table-dark {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.table-dark thead th {
+  color: #fff;
+}
+
+.table-dark tbody td {
+  color: #ddd;
+}
+
+/* Tipografia */
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+/* Estilos e Efeitos */
+.search-bar,
+.add-user-button,
+.table,
+.pagination {
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.search-bar input,
+.search-bar button,
+.add-user-button button,
+.btn-info,
+.btn-danger {
+  border: 2px solid #fff;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.search-bar input:focus,
+.search-bar button:hover,
+.add-user-button button:hover,
+.btn-info:hover,
+.btn-danger:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .table {
+    margin-top: 10px;
+  }
+}
